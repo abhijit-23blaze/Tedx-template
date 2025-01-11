@@ -16,20 +16,20 @@ const WaitlistForm = () => {
   const tiers = [
     {
       name: 'Premium',
-      price: '₹1999',
-      features: ['Front Row Seating', 'Exclusive Merchandise', 'Meet & Greet'],
+      price: '₹69',
+      features: ['Russian Randi', 'Dildo', 'Meet & Greet'],
       color: 'from-red-600/30 to-red-900/30'
     },
     {
       name: 'Standard',
-      price: '₹1499',
-      features: ['Reserved Seating', 'Event T-Shirt'],
+      price: '₹69',
+      features: ['Randi', 'Event T-Shirt'],
       color: 'from-orange-600/30 to-orange-900/30'
     },
     {
       name: 'Basic',
-      price: '₹999',
-      features: ['General Admission'],
+      price: '₹69',
+      features: ['Dildo'],
       color: 'from-yellow-600/30 to-yellow-900/30'
     }
   ];
@@ -104,8 +104,9 @@ const WaitlistForm = () => {
         {/* Form */}
         <div className="backdrop-blur-lg bg-black/30 rounded-xl shadow-2xl p-8 border border-gray-700">
           <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-red-500">TedX Event Waitlist</h2>
-            <p className="mt-2 text-gray-300">Join our exclusive waitlist for upcoming TedX events</p>
+            <h2 className="text-3xl font-bold text-red-500">TedX IIITS Waitlist</h2>
+            
+            <p className="mt-2 text-gray-300">*seats will be given out on first come first serve basis</p>
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-6">
