@@ -1,0 +1,14 @@
+# Robots.txt file for TEDx IIIT Sricity
+
+User-agent: *
+Disallow: /admin/
+Disallow: /private/
+Disallow: /cgi-bin/
+Disallow: /scripts/
+Disallow: /temp/
+
+# Allow specific files in restricted directories
+Allow: /admin/public-info.html
+
+# Specify the sitemap location
+Sitemap: https://www.tedxiiitsricity.com/
