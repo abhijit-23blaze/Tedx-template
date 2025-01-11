@@ -1,6 +1,14 @@
 import BgSpiral from "../assets/hands.png";
 import SeaBanner from "../assets/sea2.jpg";
+import { useNavigate } from 'react-router-dom';
 function Booking() {
+
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate('/form');
+  };
+
   return (
     <div className="h-[auto] mb-4">
       <div className="w-full h-[90%] flex flex-row">
@@ -36,7 +44,8 @@ function Booking() {
           className="bg-center w-[60%] h-auto bg-repeat flex justify-center items-center"
           style={{ backgroundImage: `url(${BgSpiral})` }}
         >
-          <button className="px-2 h-auto py-3 rounded-lg bg-black text-red-500 text-lg border border-red-500 transform hover:scale-105 transition duration-300 mr-2">
+          <button className="px-2 h-auto py-3 rounded-lg bg-black text-red-500 text-lg border border-red-500 transform hover:scale-105 transition duration-300 mr-2" 
+          onClick={handleClick}>
             Book Your Tickets!
           </button>
         </div>
