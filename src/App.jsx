@@ -3,6 +3,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "./pages/Layout";
 import HomePage from "./pages/HomePage/HomePage";
 import WaitlistPage from "./pages/WaitlistPage/WaitlistPage";
+import ConfirmationForm from "./components/ConfirmationForm";
 
 function App() {
   const router = createBrowserRouter([
@@ -12,7 +13,7 @@ function App() {
       children: [
         { path: "/", element: <HomePage /> },
         { path: "/form", element: <WaitlistPage /> },
-        // {path: '/about', element: <AboutPage/>},
+        { path: "/confirmation/:userId", element: <ConfirmationForm /> },
       ],
     },
   ]);
