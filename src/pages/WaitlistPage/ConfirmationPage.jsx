@@ -1,9 +1,9 @@
-import WaitlistForm from "../../components/WaitlistForm";
+import ConfirmationForm from "../../components/ConfirmationForm";
 
 function WaitlistPage() {
   return (
     <main className="w-screen min-h-screen overflow-x-hidden">
-      <WaitlistForm />
+      <ConfirmationForm />
     </main>
   );
 }

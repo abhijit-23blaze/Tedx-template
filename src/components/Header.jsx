@@ -6,9 +6,9 @@ function Header() {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
-    <header className="relative w-full">
+    <header className="fixed top-0 w-full z-50 bg-black bg-opacity-90">
       {/* Kaleidoscope Pattern Background */}
-      <div className="absolute inset-0 bg-black opacity-90">
+      <div className="absolute inset-0">
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
           <div className="absolute top-0 -left-4 w-72 h-72 bg-red-600 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
           <div className="absolute top-0 -right-4 w-72 h-72 bg-red-800 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse delay-75"></div>
@@ -50,6 +50,12 @@ function Header() {
                   </span>
                 </Link>
               ))}
+              <Link
+                to="/form"
+                className="px-6 py-2 bg-gradient-to-r from-red-600 to-red-800 text-white rounded-full hover:from-red-700 hover:to-red-900 transition-all duration-300 transform hover:scale-105 animate-pulse hover:animate-none text-sm tracking-widest shadow-lg hover:shadow-red-600/50"
+              >
+                JOIN WAITLIST
+              </Link>
             </div>
           </div>
 
@@ -66,6 +72,13 @@ function Header() {
                   {item}
                 </Link>
               ))}
+              <Link
+                to="/form"
+                className="px-6 py-2 bg-gradient-to-r from-red-600 to-red-800 text-white rounded-full hover:from-red-700 hover:to-red-900 transition-all duration-300 text-center text-sm tracking-widest shadow-lg hover:shadow-red-600/50"
+                onClick={toggleMenu}
+              >
+                JOIN WAITLIST
+              </Link>
             </div>
           </div>
         </div>

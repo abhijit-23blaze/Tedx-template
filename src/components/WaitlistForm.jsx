@@ -73,15 +73,15 @@ const WaitlistForm = () => {
   };
   
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-red-950 py-12 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-      {/* Background Effects */}
-      <div className="absolute inset-0 w-full h-full">
+    <div className="min-h-screen w-full bg-gradient-to-br from-black via-gray-900 to-red-950 pt-24 relative overflow-hidden">
+    {/* Background Effects */}
+      <div className="absolute inset-0">
         <div className="absolute top-0 -left-4 w-72 h-72 bg-red-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
         <div className="absolute top-0 -right-4 w-72 h-72 bg-orange-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
         <div className="absolute -bottom-8 left-20 w-72 h-72 bg-yellow-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"></div>
       </div>
 
-      <div className="max-w-4xl mx-auto relative">
+      <div className="w-full pt-24 px-4 sm:px-6 lg:px-8">
         {/* Ticket Tiers */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
           {tiers.map((tier) => (
