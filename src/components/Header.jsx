@@ -38,7 +38,7 @@ function Header() {
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex md:items-center md:space-x-8">
-              {['HOME', 'GALLERY', 'SPONSORS', 'TEAM', 'ABOUT'].map((item) => (
+              {['HOME',  'SPONSORS', 'TEAM', 'ABOUT'].map((item) => (
                 <Link
                   key={item}
                   to={item === 'HOME' ? '/' : `/${item.toLowerCase()}`}

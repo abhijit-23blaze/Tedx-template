@@ -2,10 +2,10 @@ import { useState } from 'react';
 import { collection, addDoc } from 'firebase/firestore';
 import { db } from '../firebase/config';
 import toast, { Toaster } from 'react-hot-toast';
-import { useAuth } from '../firebase/auth';
+//import { useAuth } from '../firebase/auth';
 
 const WaitlistForm = () => {
-  const { currentUser } = useAuth();
+  //const { currentUser } = useAuth();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -17,22 +17,16 @@ const WaitlistForm = () => {
 
   const tiers = [
     {
-      name: 'Premium',
-      price: '₹69',
-      features: ['Russian Randi', 'Dildo', 'Meet & Greet'],
+      name: 'Tier 1',
+      price: '₹599',
+      features: ['Everything in the ₹400 package', 'Exclusive TEDx T-shirt', 'Exclusive TEDx T-shirt', 'Interactive Panel with the speakers'],
       color: 'from-red-600/30 to-red-900/30'
     },
     {
-      name: 'Standard',
-      price: '₹69',
-      features: ['Randi', 'Event T-Shirt'],
-      color: 'from-orange-600/30 to-orange-900/30'
-    },
-    {
-      name: 'Basic',
-      price: '₹69',
-      features: ['Dildo'],
-      color: 'from-yellow-600/30 to-yellow-900/30'
+      name: 'Tier 2',
+      price: '₹399',
+      features: ['Access to 9 great speakers and 2 electrifying performances (An English standup comedy act and a soulful singer/band performance)', 'Delicious Lunch', 'TEDx Poster, badge, stickers, premium book & pen, tote bag & a bookmark', 'An unforgettable TEDx experience' ],
+      color: 'from-yellow-600/30 to-yellow-900/30' 
     }
   ];
 
@@ -44,16 +38,24 @@ const WaitlistForm = () => {
     }));
   };
 
+  const generateUniqueId = () => {
+    const timestamp = Date.now().toString(36);
+    const randomStr = Math.random().toString(36).substring(2, 7);
+    return `TEDx-${timestamp}-${randomStr}`.toUpperCase();
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
+
+    const uniqueId = generateUniqueId();
   
   // Get the current authenticated user
   
     try {
       await addDoc(collection(db, 'waitlist'), {
         ...formData,
-        uid: currentUser.uid, // Store the user's UID
+        uid: uniqueId, // Store the user's UID
         timestamp: new Date(),
       });
       toast.success('Successfully joined the waitlist!');
@@ -83,7 +85,7 @@ const WaitlistForm = () => {
 
       <div className="w-full pt-24 px-4 sm:px-6 lg:px-8">
         {/* Ticket Tiers */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
           {tiers.map((tier) => (
             <div 
               key={tier.name}
