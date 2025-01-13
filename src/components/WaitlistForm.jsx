@@ -11,7 +11,9 @@ const WaitlistForm = () => {
     email: '',
     phone: '',
     reason: '',
-    tier: '' // Added tier selection
+    tier: '', // Added tier selection
+    organization: '',
+    otherOrganization: '' // New field for custom organization
   });
   const [loading, setLoading] = useState(false);
 
@@ -19,7 +21,7 @@ const WaitlistForm = () => {
     {
       name: 'Tier 1',
       price: '₹599',
-      features: ['Everything in the ₹400 package', 'Exclusive TEDx T-shirt', 'Exclusive TEDx T-shirt', 'Interactive Panel with the speakers'],
+      features: ['Everything in the ₹400 package', 'Exclusive TEDx T-shirt', 'Interactive Panel with the speakers'],
       color: 'from-red-600/30 to-red-900/30'
     },
     {
@@ -30,11 +32,21 @@ const WaitlistForm = () => {
     }
   ];
 
+  const organizations = [
+    'IIIT Sri City',
+    'IIT Tirupati',
+    'Krea University',
+    'VIT Chennai',
+    'Other'
+  ];
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prevState => ({
       ...prevState,
-      [name]: value
+      [name]: value,
+      // Reset otherOrganization when organization changes
+      ...(name === 'organization' && value !== 'Other' && { otherOrganization: '' })
     }));
   };
 
@@ -47,15 +59,15 @@ const WaitlistForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-
-    const uniqueId = generateUniqueId();
   
-  // Get the current authenticated user
+    const uniqueId = generateUniqueId();
   
     try {
       await addDoc(collection(db, 'waitlist'), {
         ...formData,
-        uid: uniqueId, // Store the user's UID
+        // Use otherOrganization if "Other" is selected
+        organization: formData.organization === 'Other' ? formData.otherOrganization : formData.organization,
+        uid: uniqueId,
         timestamp: new Date(),
       });
       toast.success('Successfully joined the waitlist!');
@@ -64,7 +76,9 @@ const WaitlistForm = () => {
         email: '',
         phone: '',
         reason: '',
-        tier: ''
+        tier: '',
+        organization: '',
+        otherOrganization: ''
       });
     } catch (error) {
       console.error('Error adding document: ', error);
@@ -73,7 +87,7 @@ const WaitlistForm = () => {
       setLoading(false);
     }
   };
-  
+
   return (
     <div className="min-h-screen w-full bg-gradient-to-br from-black via-gray-900 to-red-950 pt-24 relative overflow-hidden">
     {/* Background Effects */}
@@ -163,6 +177,44 @@ const WaitlistForm = () => {
                 className="mt-1 block w-full bg-black/50 border border-gray-600 rounded-md shadow-sm p-2 text-white placeholder-gray-400 focus:ring-red-500 focus:border-red-500 backdrop-blur-sm"
               />
             </div>
+
+            <div className="mb-6">
+              <label className="block text-sm font-medium text-gray-300 mb-2">
+                Organization
+              </label>
+              <select
+                name="organization"
+                value={formData.organization}
+                onChange={handleChange}
+                required
+                className="w-full px-4 py-2 bg-gray text-red rounded-lg border  focus:border-red-500 focus:ring-1 focus:ring-red-500"
+                style={{ backgroundColor: 'black' }}
+              >
+                <option value="" className="bg-black text-white">Select Organization</option>
+                {organizations.map(org => (
+                  <option key={org} value={org} className="bg-black text-white">{org}</option>
+                ))}
+              </select>
+            </div>
+
+            {formData.organization === 'Other' && (
+              <div className="mb-6">
+                <label className="block text-sm font-medium text-gray-300 mb-2">
+                  Other Organization
+                </label>
+                <input
+                  type="text"
+                  name="otherOrganization"
+                  value={formData.otherOrganization}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-4 py-2 bg-black/30 text-white rounded-lg border border-gray-700 focus:border-red-500 focus:ring-1 focus:ring-red-500"
+                  placeholder="Enter your organization"
+                />
+              </div>
+            )}
+
+            
 
             <div>
               <label htmlFor="reason" className="block text-sm font-medium text-gray-300">

@@ -6,6 +6,8 @@ import Timer from "../../components/Timer";
 //import Footer from "../../components/Footer";
 function HomePage() {
   return (
+
+    
     <div>
       <StartingBanner />
      

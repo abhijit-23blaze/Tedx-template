@@ -1,5 +1,5 @@
 import "./App.css";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider, Navigate } from "react-router-dom";
 import Layout from "./pages/Layout";
 import HomePage from "./pages/HomePage/HomePage";
 import AboutPage from "./components/AboutPage";
@@ -18,9 +18,14 @@ function App() {
         { path: "/confirmation/:userId", element: <ConfirmationPage /> },
         { path: "/about", element: <AboutPage /> },
         { path: "/speakers", element: <Speaker /> },
+        // Add catch-all route
+        { path: "*", element: <Navigate to="/" replace /> }
       ],
     },
-  ]);
+  ], {
+    // Add basename if deploying to GitHub Pages
+    //basename: process.env.PUBLIC_URL
+  });
 
   return (
     <>
