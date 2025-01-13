@@ -62,7 +62,7 @@ function Header() {
           {/* Mobile Navigation */}
           <div className={`${isMenuOpen ? 'block' : 'hidden'} md:hidden mt-4`}>
             <div className="flex flex-col space-y-4 py-4">
-              {['HOME', 'GALLERY', 'SPONSORS', 'TEAM', 'ABOUT'].map((item) => (
+              {['HOME', 'SPONSORS', 'TEAM', 'ABOUT'].map((item) => (
                 <Link
                   key={item}
                   to={item === 'HOME' ? '/' : `/${item.toLowerCase()}`}
