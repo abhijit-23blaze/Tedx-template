@@ -1,22 +1,11 @@
-import WaitlistForm from "../../components/WaitlistForm";
+import AboutPage from "../../components/AboutPage";
 
-function AboutPage() {
+function WaitlistPage() {
   return (
     <main className="w-screen min-h-screen overflow-x-hidden">
-      Abhijit is the goat. sakjdaosijeojsjdfnoufnue9rfner8yefnu8tgnrt8ngu8trghuthgerijfpwrjpwir
-
-
-      export default df 
-      g
-      
-      
-      gradientd
-      goatt
-      goatd
-      tygdh
-      goatyrt
+      <AboutPage />
     </main>
   );
 }
 
-export default AboutPage;
+export default WaitlistPage;
