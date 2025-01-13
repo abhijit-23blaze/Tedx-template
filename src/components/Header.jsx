@@ -55,6 +55,8 @@ function Header() {
                 className="px-6 py-2 bg-gradient-to-r from-red-600 to-red-800 text-white rounded-full hover:from-red-700 hover:to-red-900 transition-all duration-300 transform hover:scale-105 animate-pulse hover:animate-none text-sm tracking-widest shadow-lg hover:shadow-red-600/50"
               >
                 JOIN WAITLIST
+
+                
               </Link>
             </div>
           </div>
