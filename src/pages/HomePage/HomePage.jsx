@@ -13,7 +13,7 @@ function HomePage() {
       <ReasonsToAttend />
       <Speaker />
 
-      <Footer />
+      
     </div>
   );
 }
