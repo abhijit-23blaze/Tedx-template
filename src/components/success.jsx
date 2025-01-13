@@ -32,7 +32,7 @@ function SuccessPage() {
             </div>
 
             <h1 className="text-4xl font-bold text-white">Registration Successful!</h1>
-            <p className="text-xl text-gray-300">Thank you for registering for TEDx IIITS</p>
+            <p className="text-xl text-gray-300">Thank you for registering for TEDxIIIT Sri City</p>
             
             <div className="py-6 border-t border-gray-700">
               <p className="text-gray-400">Your Registration ID:</p>

@@ -22,7 +22,7 @@ const WaitlistForm = () => {
     {
       name: 'Tier 1',
       price: '₹599',
-      features: ['Everything in the ₹400 package', 'Exclusive TEDx T-shirt', 'Interactive Panel with the speakers'],
+      features: ['Everything in the ₹400 package','Priority Seating', 'Exclusive TEDx T-shirt', 'Interactive Panel with the speakers'],
       color: 'from-red-600/30 to-red-900/30'
     },
     {
@@ -81,7 +81,7 @@ const WaitlistForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+      
     // Validate tier selection
     if (!formData.tier) {
       setTierError('Please select a tier');
@@ -105,7 +105,6 @@ const WaitlistForm = () => {
         timestamp: new Date(),
       });
       navigate('/success', { state: { uniqueId } });
-      toast.success('Successfully joined the waitlist!');
       setFormData({
         name: '',
         email: '',
@@ -135,7 +134,7 @@ const WaitlistForm = () => {
 
       <div className="w-full pt-24 px-4 sm:px-6 lg:px-8">
         {/* Ticket Tiers */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
           {tiers.map((tier) => (
             <div 
               key={tier.name}
@@ -145,7 +144,7 @@ const WaitlistForm = () => {
                 formData.tier === tier.name ? 'ring-2 ring-red-500' : ''
               }`}
               onClick={() => {
-                handleChange({ target: { name: 'tier', value: tier.name } });
+                setFormData(prev => ({ ...prev, tier: tier.name }));
                 setTierError('');
               }}
             >
@@ -290,13 +289,20 @@ const WaitlistForm = () => {
 
             <button
               type="submit"
-              disabled={loading || !formData.tier}
-              className={`w-full flex justify-center py-3 px-4 border border-red-500 rounded-md shadow-sm text-sm font-medium text-white bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 transition duration-300 ${
-                loading || !formData.tier ? 'opacity-50 cursor-not-allowed' : ''
+              disabled={!formData.tier || loading}
+              className={`w-full py-3 rounded-full text-white font-semibold transition-all duration-300 ${
+                formData.tier 
+                  ? 'bg-gradient-to-r from-red-600 to-red-800 hover:from-red-700 hover:to-red-900 cursor-pointer' 
+                  : 'bg-gray-600 cursor-not-allowed'
               }`}
             >
-              {loading ? 'Submitting...' : 'Join Waitlist'}
+              {!formData.tier ? 'Please Select a Tier' : loading ? 'Submitting...' : 'Join Waitlist'}
             </button>
+            
+            {/* Add helper text above button */}
+            <p className="text-center text-sm text-gray-400 mb-4">
+              {!formData.tier ? '👆 Select a tier package above to continue' : '✨ Ready to join!'}
+            </p>
           </form>
         </div>
       </div>
