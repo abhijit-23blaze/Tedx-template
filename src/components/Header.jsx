@@ -21,7 +21,7 @@ function Header() {
             {/* TEDx Logo */}
             <div className="flex-shrink-0">
               <Link to="/" className="text-2xl font-bold text-red-600">
-                TEDx<span className="text-white">IIITS</span>
+                TEDx<span className="text-white">IIIT Sri City</span>
               </Link>
             </div>
 
@@ -38,7 +38,7 @@ function Header() {
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex md:items-center md:space-x-8">
-              {['HOME', 'ABOUT'].map((item) => (
+              {['HOME','SPEAKERS', 'ABOUT'].map((item) => (
                 <Link
                   key={item}
                   to={item === 'HOME' ? '/' : `/${item.toLowerCase()}`}

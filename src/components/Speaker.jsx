@@ -1,18 +1,41 @@
+import { useState, useEffect } from 'react';
+
 function SpeakerCard({ image, name, description }) {
   return (
-    <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-4">
-      <div className="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:rotate-2 hover:shadow-2xl hover:shadow-glow">
-        <img src={image} alt={name} className="w-full h-48 object-cover" />
-        <div className="p-4">
-          <h3 className="text-xl font-semibold text-gray-800">{name}</h3>
-          <p className="text-gray-600 mt-2">{description}</p>
+    <div className="relative group perspective-1000">
+      <div className="absolute inset-0 bg-gradient-to-br from-red-600 via-purple-600 to-red-900 rounded-2xl opacity-0 group-hover:opacity-20 transform transition-all duration-500 animate-gradient-xy"></div>
+      <div className="backdrop-blur-lg bg-black/30 rounded-2xl p-6 border border-gray-800 shadow-2xl transform transition-all duration-500 hover:-translate-y-2 hover:rotate-y-12 hover:border-red-500/30">
+        <div className="relative mb-6 overflow-hidden rounded-xl aspect-[4/3] transform transition-transform duration-500">
+          <div className="absolute inset-0 bg-gradient-to-br from-red-500/20 to-purple-500/20 mix-blend-overlay group-hover:opacity-75 transition-opacity duration-300"></div>
+          <img
+            src={image}
+            alt={name}
+            className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        </div>
+        <h3 className="text-2xl font-bold bg-gradient-to-r from-red-500 to-red-700 bg-clip-text text-transparent mb-3">{name}</h3>
+        <p className="text-gray-300 leading-relaxed text-sm transform transition-all duration-300 group-hover:text-white">{description}</p>
+        
+        {/* Geometric Pattern Overlay */}
+        <div className="absolute -inset-px bg-gradient-to-r from-red-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-2xl">
+          <div className="absolute inset-0 bg-[url('/kaleidoscope-pattern.png')] bg-center bg-no-repeat bg-cover mix-blend-overlay opacity-30"></div>
         </div>
       </div>
     </div>
   );
 }
 
+
 function Speaker() {
+
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
+
   const speakers = [
     {
       name: "Thulasimathi Murugesan  ",
@@ -83,33 +106,47 @@ function Speaker() {
   ];
 
   return (
-    <div className="h-[80%] relative">
-      <div
-        className="w-full h-[60vh] bg-repeat-y bg-right-bottom flex flex-col justify-center items-center mt-[3vh]"
-        style={{
-          backgroundImage: `url('src/assets/speakers.png')`,
-          backgroundSize: "100% 60vh",
-          backgroundPosition: "10% 30%",
-        }}
-      >
-        <div className="absolute top-[4%] left-0 w-full flex justify-center items-center text-white font-bold text-4xl z-10">
-          <span>Meet Our TEDx Speakers</span>
+    <section className="py-24 pt-32 relative overflow-hidden">
+      {/* Background Effects */}
+      <div className="absolute inset-0 bg-black">
+        <div className="absolute inset-0">
+          <div className="absolute top-0 -left-4 w-72 h-72 bg-red-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
+          <div className="absolute top-0 -right-4 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
+          <div className="absolute -bottom-8 left-20 w-72 h-72 bg-red-700 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"></div>
         </div>
       </div>
 
-      <div className="container mx-auto px-4 py-12 mt-[-25%]">
-        <div className="flex flex-wrap justify-center">
+      <div className="relative container mx-auto px-4">
+        {/* Section Header */}
+        <div className="text-center mb-16 opacity-0 animate-fade-in">
+          <h2 className="text-5xl font-bold text-white mb-4 relative">
+            Our <span className="text-red-600">Speakers</span>
+            <div className="absolute -inset-1 bg-red-600/20 blur-lg rounded-full"></div>
+          </h2>
+          <div className="w-24 h-1 bg-gradient-to-r from-red-600 to-purple-600 mx-auto mb-6 animate-pulse"></div>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            Meet our extraordinary speakers who will inspire and transform your perspective
+          </p>
+        </div>
+
+        {/* Speakers Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {speakers.map((speaker, index) => (
-            <SpeakerCard
-              key={index}
-              image={speaker.image}
-              name={speaker.name}
-              description={speaker.description}
-            />
+            <div 
+              key={speaker.name} 
+              className={`transition-all duration-1000 transform ${
+                isVisible 
+                  ? 'opacity-100 translate-y-0' 
+                  : 'opacity-0 translate-y-8'
+              }`}
+              style={{ transitionDelay: `${index * 200}ms` }}
+            >
+              <SpeakerCard {...speaker} />
+            </div>
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

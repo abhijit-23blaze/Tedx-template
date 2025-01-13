@@ -5,6 +5,7 @@ import HomePage from "./pages/HomePage/HomePage";
 import AboutPage from "./components/AboutPage";
 import WaitlistPage from "./pages/WaitlistPage/WaitlistPage";
 import ConfirmationPage from "./pages/WaitlistPage/ConfirmationPage";
+import Speaker from "./components/Speaker";
 
 function App() {
   const router = createBrowserRouter([
@@ -16,6 +17,7 @@ function App() {
         { path: "/form", element: <WaitlistPage /> },
         { path: "/confirmation/:userId", element: <ConfirmationPage /> },
         { path: "/about", element: <AboutPage /> },
+        { path: "/speakers", element: <Speaker /> },
       ],
     },
   ]);
