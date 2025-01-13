@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import banner from "../assets/kalidoscope.jpeg";
-import mobileBanner from "../assets/mobile_iiit.webp";
+import mobileBanner from "../assets/kalidoscope.jpeg";
 
 function StartingBanner() {
   const [backgroundImage, setBackgroundImage] = useState(banner);
