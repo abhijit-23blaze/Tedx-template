@@ -6,6 +6,7 @@ import AboutPage from "./components/AboutPage";
 import WaitlistPage from "./pages/WaitlistPage/WaitlistPage";
 import ConfirmationPage from "./pages/WaitlistPage/ConfirmationPage";
 import Speaker from "./components/Speaker";
+import SuccessPage from "./components/success";
 
 function App() {
   const router = createBrowserRouter([
@@ -18,6 +19,7 @@ function App() {
         { path: "/confirmation/:userId", element: <ConfirmationPage /> },
         { path: "/about", element: <AboutPage /> },
         { path: "/speakers", element: <Speaker /> },
+        { path: "/success", element: <SuccessPage /> },
         // Add catch-all route
         { path: "*", element: <Navigate to="/" replace /> }
       ],

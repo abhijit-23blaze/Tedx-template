@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { collection, addDoc } from 'firebase/firestore';
 import { db } from '../firebase/config';
 import toast, { Toaster } from 'react-hot-toast';
+import { useNavigate } from 'react-router-dom';
 //import { useAuth } from '../firebase/auth';
 
 const WaitlistForm = () => {
@@ -40,14 +41,36 @@ const WaitlistForm = () => {
     'Other'
   ];
 
+  const [phoneError, setPhoneError] = useState('');
+
+  const [tierError, setTierError] = useState('');
+
+  const navigate = useNavigate();
+
+  
+
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prevState => ({
-      ...prevState,
-      [name]: value,
-      // Reset otherOrganization when organization changes
-      ...(name === 'organization' && value !== 'Other' && { otherOrganization: '' })
-    }));
+    
+    if (name === 'phone') {
+      // Only allow numbers
+      const numbersOnly = value.replace(/[^\d]/g, '');
+      // Limit to 10 digits
+      const truncated = numbersOnly.slice(0, 10);
+      
+      setPhoneError(truncated.length === 10 ? '' : 'Phone number must be 10 digits');
+      
+      setFormData(prevState => ({
+        ...prevState,
+        [name]: truncated
+      }));
+    } else {
+      setFormData(prevState => ({
+        ...prevState,
+        [name]: value,
+        ...(name === 'organization' && value !== 'Other' && { otherOrganization: '' })
+      }));
+    }
   };
 
   const generateUniqueId = () => {
@@ -58,18 +81,30 @@ const WaitlistForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setLoading(true);
+    
+    // Validate tier selection
+    if (!formData.tier) {
+      setTierError('Please select a tier');
+      toast.error('Please select a tier');
+      return;
+    }
   
+    if (formData.phone.length !== 10) {
+      setPhoneError('Phone number must be 10 digits');
+      return;
+    }
+  
+    setLoading(true);
     const uniqueId = generateUniqueId();
   
     try {
       await addDoc(collection(db, 'waitlist'), {
         ...formData,
-        // Use otherOrganization if "Other" is selected
         organization: formData.organization === 'Other' ? formData.otherOrganization : formData.organization,
         uid: uniqueId,
         timestamp: new Date(),
       });
+      navigate('/success', { state: { uniqueId } });
       toast.success('Successfully joined the waitlist!');
       setFormData({
         name: '',
@@ -80,6 +115,7 @@ const WaitlistForm = () => {
         organization: '',
         otherOrganization: ''
       });
+      setTierError('');
     } catch (error) {
       console.error('Error adding document: ', error);
       toast.error('Something went wrong. Please try again.');
@@ -103,8 +139,15 @@ const WaitlistForm = () => {
           {tiers.map((tier) => (
             <div 
               key={tier.name}
-              className={`backdrop-blur-lg bg-gradient-to-br ${tier.color} border border-gray-700 rounded-xl p-6 shadow-2xl transform hover:scale-105 transition duration-300 cursor-pointer ${formData.tier === tier.name ? 'ring-2 ring-red-500' : ''}`}
-              onClick={() => handleChange({ target: { name: 'tier', value: tier.name } })}
+              className={`backdrop-blur-lg bg-gradient-to-br ${tier.color} border ${
+                tierError ? 'border-red-500' : 'border-gray-700'
+              } rounded-xl p-6 shadow-2xl transform hover:scale-105 transition duration-300 cursor-pointer ${
+                formData.tier === tier.name ? 'ring-2 ring-red-500' : ''
+              }`}
+              onClick={() => {
+                handleChange({ target: { name: 'tier', value: tier.name } });
+                setTierError('');
+              }}
             >
               <h3 className="text-xl font-bold text-white mb-2">{tier.name}</h3>
               <p className="text-2xl font-bold text-red-500 mb-4">{tier.price}</p>
@@ -121,6 +164,11 @@ const WaitlistForm = () => {
             </div>
           ))}
         </div>
+        {tierError && (
+          <p className="mt-1 text-sm text-red-500 text-center mb-4">
+            {tierError}
+          </p>
+        )}
 
         {/* Form */}
         <div className="backdrop-blur-lg bg-black/30 rounded-xl shadow-2xl p-8 border border-gray-700">
@@ -163,19 +211,28 @@ const WaitlistForm = () => {
               </div>
             </div>
 
-            <div>
-              <label htmlFor="phone" className="block text-sm font-medium text-gray-300">
+            <div className="mb-6">
+              <label className="block text-sm font-medium text-gray-300 mb-2">
                 Phone Number
               </label>
               <input
                 type="tel"
                 name="phone"
-                id="phone"
-                required
                 value={formData.phone}
                 onChange={handleChange}
-                className="mt-1 block w-full bg-black/50 border border-gray-600 rounded-md shadow-sm p-2 text-white placeholder-gray-400 focus:ring-red-500 focus:border-red-500 backdrop-blur-sm"
+                pattern="[0-9]{10}"
+                maxLength="10"
+                required
+                className={`w-full px-4 py-2 bg-black/30 text-white rounded-lg border ${
+                  phoneError ? 'border-red-500' : 'border-gray-700'
+                } focus:border-red-500 focus:ring-1 focus:ring-red-500`}
+                placeholder="Enter your phone number"
               />
+              {phoneError && (
+                <p className="mt-1 text-sm text-red-500">
+                  {phoneError}
+                </p>
+              )}
             </div>
 
             <div className="mb-6">
