@@ -172,7 +172,7 @@ const WaitlistForm = () => {
         {/* Form */}
         <div className="backdrop-blur-lg bg-black/30 rounded-xl shadow-2xl p-8 border border-gray-700">
           <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-red-500">TedX IIITS Waitlist</h2>
+            <h2 className="text-3xl font-bold text-red-500">TedX IIIT Sri City Waitlist</h2>
             
             <p className="mt-2 text-gray-300">*seats will be given out on first come first serve basis</p>
           </div>

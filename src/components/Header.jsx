@@ -20,7 +20,7 @@ function Header() {
           <div className="flex items-center justify-between">
             {/* TEDx Logo */}
             <div className="flex-shrink-0">
-              <Link to="/" className="text-2xl font-bold text-red-600">
+              <Link to="/" className="text-2xl font-bold text-red-600 hover:text-red-600">
                 TEDx<span className="text-white">IIIT Sri City</span>
               </Link>
             </div>

@@ -99,7 +99,7 @@ function Speaker() {
       name: "Anil Kumar",
       description:
         "A leader in digital transformation, he blends expertise in AI, cloud, and innovation to deliver groundbreaking solutions.With 400+ successful deals and a passion for mentoring future leaders, his journey is truly inspiring. Anil Kumar's work continues to shape the future of technology across industries.",
-      image: "/anilkumar.png",
+      image: "/anilkumar.jpg",
       alt: "Anil Kumar",
     },
     // Add more speaker objects as needed
