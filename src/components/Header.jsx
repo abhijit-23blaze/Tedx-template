@@ -38,7 +38,7 @@ function Header() {
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex md:items-center md:space-x-8">
-              {['HOME','SPEAKERS','SPEAKERS', 'ABOUT'].map((item) => (
+              {['HOME','SPEAKERS', 'ABOUT'].map((item) => (
                 <Link
                   key={item}
                   to={item === 'HOME' ? '/' : `/${item.toLowerCase()}`}
@@ -64,7 +64,7 @@ function Header() {
           {/* Mobile Navigation */}
           <div className={`${isMenuOpen ? 'block' : 'hidden'} md:hidden mt-4`}>
             <div className="flex flex-col space-y-4 py-4">
-              {['HOME', 'ABOUT'].map((item) => (
+              {['HOME','SPEAKERS', 'ABOUT'].map((item) => (
                 <Link
                   key={item}
                   to={item === 'HOME' ? '/' : `/${item.toLowerCase()}`}
