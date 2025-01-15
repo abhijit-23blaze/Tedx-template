@@ -20,28 +20,46 @@ function Header() {
           <div className="flex items-center justify-between">
             {/* TEDx Logo */}
             <div className="flex-shrink-0">
-              <Link to="/" className="text-2xl font-bold text-red-600 hover:text-red-600">
+              <Link
+                to="/"
+                className="text-2xl font-bold text-red-600 hover:text-red-600"
+              >
                 TEDx<span className="text-white">IIIT Sri City</span>
               </Link>
             </div>
 
             {/* Mobile Menu Button */}
             <div className="md:hidden">
-              <button onClick={toggleMenu} className="text-white hover:text-red-600 transition-colors">
+              <button
+                onClick={toggleMenu}
+                className="text-white hover:text-red-600 transition-colors"
+              >
                 <div className="space-y-2">
-                  <div className={`w-8 h-0.5 bg-current transform transition-all duration-300 ${isMenuOpen ? 'rotate-45 translate-y-2.5' : ''}`}></div>
-                  <div className={`w-8 h-0.5 bg-current transition-all duration-300 ${isMenuOpen ? 'opacity-0' : ''}`}></div>
-                  <div className={`w-8 h-0.5 bg-current transform transition-all duration-300 ${isMenuOpen ? '-rotate-45 -translate-y-2.5' : ''}`}></div>
+                  <div
+                    className={`w-8 h-0.5 bg-current transform transition-all duration-300 ${
+                      isMenuOpen ? "rotate-45 translate-y-2.5" : ""
+                    }`}
+                  ></div>
+                  <div
+                    className={`w-8 h-0.5 bg-current transition-all duration-300 ${
+                      isMenuOpen ? "opacity-0" : ""
+                    }`}
+                  ></div>
+                  <div
+                    className={`w-8 h-0.5 bg-current transform transition-all duration-300 ${
+                      isMenuOpen ? "-rotate-45 -translate-y-2.5" : ""
+                    }`}
+                  ></div>
                 </div>
               </button>
             </div>
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex md:items-center md:space-x-8">
-              {['HOME','SPEAKERS', 'ABOUT'].map((item) => (
+              {["HOME", "SPEAKERS", "ABOUT", "POLICIES"].map((item) => (
                 <Link
                   key={item}
-                  to={item === 'HOME' ? '/' : `/${item.toLowerCase()}`}
+                  to={item === "HOME" ? "/" : `/${item.toLowerCase()}`}
                   className="relative text-white hover:text-red-600 transition-colors duration-300 text-sm tracking-widest"
                 >
                   <span className="relative inline-block py-2">
@@ -55,19 +73,17 @@ function Header() {
                 className="px-6 py-2 bg-gradient-to-r from-red-600 to-red-800 text-white rounded-full hover:from-red-700 hover:to-red-900 transition-all duration-300 transform hover:scale-105 animate-pulse hover:animate-none text-sm tracking-widest shadow-lg hover:shadow-red-600/50"
               >
                 JOIN WAITLIST
-
-                
               </Link>
             </div>
           </div>
 
           {/* Mobile Navigation */}
-          <div className={`${isMenuOpen ? 'block' : 'hidden'} md:hidden mt-4`}>
+          <div className={`${isMenuOpen ? "block" : "hidden"} md:hidden mt-4`}>
             <div className="flex flex-col space-y-4 py-4">
-              {['HOME','SPEAKERS', 'ABOUT'].map((item) => (
+              {["HOME", "SPEAKERS", "ABOUT", "POLICIES"].map((item) => (
                 <Link
                   key={item}
-                  to={item === 'HOME' ? '/' : `/${item.toLowerCase()}`}
+                  to={item === "HOME" ? "/" : `/${item.toLowerCase()}`}
                   className="text-white hover:text-red-600 transition-colors duration-300 text-sm tracking-widest"
                   onClick={toggleMenu}
                 >
