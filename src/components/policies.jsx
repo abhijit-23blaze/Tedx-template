@@ -182,7 +182,7 @@ function policies() {
             on the Platform, You shall be subject to the policies that are
             applicable to the Platform for such transaction. By mere use of the
             Platform, You shall be contracting with the Platform Owner (KODUKULA
-            SHASTHASRI YOJITH KAUSTABH )and these terms and conditions including
+            SHASTHASRI YOJITH KAUSTABH) and these terms and conditions including
             the policies constitute Your binding obligations, with Platform
             Owner. These Terms of Use 3 relate to your use of our website, goods
             (as applicable) or services (as applicable) (collectively,
