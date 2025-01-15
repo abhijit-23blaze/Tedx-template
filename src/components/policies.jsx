@@ -157,7 +157,7 @@ function policies() {
             Policy to reflect changes to our information practices. We may alert
             / notify you about the significant changes to the Privacy Policy, in
             the manner as may be required under applicable laws.
-            ( Website owned by Yojith Kaustubh). No refund aceepted in any circumstances.
+            ( Website owned by Kodukula Shasthasri Yojith Kaustubh). No refund aceepted in any circumstances.
           </p>
 
           <p className="text-lg text-gray-300 leading-relaxed mb-8">
