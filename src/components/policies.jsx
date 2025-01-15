@@ -181,38 +181,39 @@ function policies() {
             which are incorporated herein by way of reference. If You transact
             on the Platform, You shall be subject to the policies that are
             applicable to the Platform for such transaction. By mere use of the
-            Platform, You shall be contracting with the Platform Owner and these
-            terms and conditions including the policies constitute Your binding
-            obligations, with Platform Owner. These Terms of Use 3 relate to
-            your use of our website, goods (as applicable) or services (as
-            applicable) (collectively, “Services”). Any terms and conditions
-            proposed by You which are in addition to or which conflict with
-            these Terms of Use are expressly rejected by the Platform Owner and
-            shall be of no force or effect. These Terms of Use can be modified
-            at any time without assigning any reason. It is your responsibility
-            to periodically review these Terms of Use to stay informed of
-            updates. For the purpose of these Terms of Use, wherever the context
-            so requires "you", “your” or "user" shall mean any natural or legal
-            person who has agreed to become a user/buyer on the Platform.
-            ACCESSING, BROWSING OR OTHERWISE USING THE PLATFORM INDICATES YOUR
-            AGREEMENT TO ALL THE TERMS AND CONDITIONS UNDER THESE TERMS OF USE,
-            SO PLEASE READ THE TERMS OF USE CAREFULLY BEFORE PROCEEDING. The use
-            of Platform and/or availing of our Services is subject to the
-            following Terms of Use: To access and use the Services, you agree to
-            provide true, accurate and complete information to us during and
-            after registration, and you shall be responsible for all acts done
-            through the use of your registered account on the Platform. Neither
-            we nor any third parties provide any warranty or guarantee as to the
-            accuracy, timeliness, performance, completeness or suitability of
-            the information and materials offered on this website or through the
-            Services, for any specific purpose. You acknowledge that such
-            information and materials may contain inaccuracies or errors and we
-            expressly exclude liability for any such inaccuracies or errors to
-            the fullest extent permitted by law. Your use of our Services and
-            the Platform is solely and entirely at your own risk and discretion
-            for which we shall not be liable to you in any manner. You are
-            required to independently assess and ensure that the Services meet
-            your requirements. The contents of the Platform and the Services are
+            Platform, You shall be contracting with the Platform Owner (KODUKULA
+            SHASTHASRI YOJITH KAUSTABH )and these terms and conditions including
+            the policies constitute Your binding obligations, with Platform
+            Owner. These Terms of Use 3 relate to your use of our website, goods
+            (as applicable) or services (as applicable) (collectively,
+            “Services”). Any terms and conditions proposed by You which are in
+            addition to or which conflict with these Terms of Use are expressly
+            rejected by the Platform Owner and shall be of no force or effect.
+            These Terms of Use can be modified at any time without assigning any
+            reason. It is your responsibility to periodically review these Terms
+            of Use to stay informed of updates. For the purpose of these Terms
+            of Use, wherever the context so requires "you", “your” or "user"
+            shall mean any natural or legal person who has agreed to become a
+            user/buyer on the Platform. ACCESSING, BROWSING OR OTHERWISE USING
+            THE PLATFORM INDICATES YOUR AGREEMENT TO ALL THE TERMS AND
+            CONDITIONS UNDER THESE TERMS OF USE, SO PLEASE READ THE TERMS OF USE
+            CAREFULLY BEFORE PROCEEDING. The use of Platform and/or availing of
+            our Services is subject to the following Terms of Use: To access and
+            use the Services, you agree to provide true, accurate and complete
+            information to us during and after registration, and you shall be
+            responsible for all acts done through the use of your registered
+            account on the Platform. Neither we nor any third parties provide
+            any warranty or guarantee as to the accuracy, timeliness,
+            performance, completeness or suitability of the information and
+            materials offered on this website or through the Services, for any
+            specific purpose. You acknowledge that such information and
+            materials may contain inaccuracies or errors and we expressly
+            exclude liability for any such inaccuracies or errors to the fullest
+            extent permitted by law. Your use of our Services and the Platform
+            is solely and entirely at your own risk and discretion for which we
+            shall not be liable to you in any manner. You are required to
+            independently assess and ensure that the Services meet your
+            requirements. The contents of the Platform and the Services are
             proprietary to us and are licensed to us. You will not have any
             authority to claim any intellectual property rights, title, or
             interest in its contents. The contents includes and is not limited
@@ -255,30 +256,9 @@ function policies() {
             enforceability, shall be governed by and construed in accordance
             with the laws of India. All disputes arising out of or in connection
             with these Terms shall be subject to the exclusive jurisdiction of
-            the courts in (Enter City and State) All concerns or communications
+            the courts in (Andhra Pradesh). All concerns or communications
             relating to these Terms must be communicated to us using the contact
-            information provided on this website. Shipping Policy Processing
-            Time All orders are delivered within 2-3 business days. Orders are
-            not shipped or delivered on weekends or holidays. If we are
-            experiencing a high volume of orders, shipments may be delayed by a
-            few days. Please allow additional days in transit for delivery. If
-            there will be a significant delay in the shipment of your order, we
-            will contact you via email or phone. Shipping Time Domestic
-            Shipping: Orders will be delivered within 3 to 4 weeks from the date
-            of order confirmation. Please note that delivery times may be
-            affected by factors beyond our control, such as weather conditions,
-            customs delays, and other unforeseen circumstances. Return and
-            Refund policy Return We have a 5-day return policy, which means you
-            have 5 days after receiving your item to request a return. Once the
-            return product is received it will be inspected and the return will
-            be approved within 2 days Refunds 5 We will notify you once we’ve
-            received and inspected your return, and let you know if the refund
-            was approved or not. If approved, you’ll be automatically refunded
-            on your original payment method within 10 business days. Please
-            remember it can take some time for your bank or credit card company
-            to process and post the refund too. If more than 15 business days
-            have passed since we’ve approved your return, please contact us at
-            tedx@iiits.in.
+            information provided on this website.
           </p>
         </div>
       </div>
