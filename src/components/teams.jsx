@@ -39,6 +39,11 @@ function Team() {
 
         photo: "/teams/DP 7.png", // Replace with actual photo URL
       },
+      {
+        name: "Sahal Ansar",
+
+        photo: "/teams/WhatsApp Image 2025-01-16 at 11.27.33 PM.jpeg", // Replace with actual photo URL
+      },
     ],
     "Website & Tech": [
       {
