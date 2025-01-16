@@ -157,6 +157,7 @@ function policies() {
             Policy to reflect changes to our information practices. We may alert
             / notify you about the significant changes to the Privacy Policy, in
             the manner as may be required under applicable laws.
+            ( Website owned by Kodukula Shasthasri Yojith Kaustubh). No refund aceepted in any circumstances.
           </p>
 
           <p className="text-lg text-gray-300 leading-relaxed mb-8">
@@ -173,7 +174,7 @@ function policies() {
             Information Technology (Intermediaries guidelines) Rules, 2011 that
             require publishing the rules and regulations, privacy policy and
             Terms of Use for access or usage of domain name
-            [https://www.tedxiiitsricity.com/] (“Website”), including the
+            [https://www.tedxiiitsricity.com/], including the
             related mobile site and mobile application (hereinafter 3 referred
             to as “Platform”). Your use of the Platform and services and tools
             are governed by the following terms and conditions ("Terms of Use")
@@ -256,7 +257,10 @@ function policies() {
             enforceability, shall be governed by and construed in accordance
             with the laws of India. All disputes arising out of or in connection
             with these Terms shall be subject to the exclusive jurisdiction of
+
             the courts in (Andhra Pradesh). All concerns or communications
+
+            the courts in India All concerns or communications
             relating to these Terms must be communicated to us using the contact
             information provided on this website.
           </p>
