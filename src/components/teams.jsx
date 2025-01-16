@@ -73,11 +73,11 @@ function Team() {
 
         photo: "/teams/WhatsApp Image 2025-01-16 at 11.27.33 PM.jpeg", // Replace with actual photo URL
       },
-      {
-        name: "Shriansh Jain",
+      // {
+      //   name: "Shriansh Jain",
 
-        photo: "/teams/WhatsApp Image 2025-01-16 at 8.28.10 PM.jpeg", // Replace with actual photo URL
-      },
+      //   photo: "/teams/WhatsApp Image 2025-01-16 at 8.28.10 PM.jpeg", // Replace with actual photo URL
+      // },
       
     ],
     "Website & Tech": [

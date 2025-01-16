@@ -21,8 +21,8 @@ const WaitlistForm = () => {
   const tiers = [
     {
       name: 'Tier 1',
-      price: '₹599',
-      features: ['Everything in the ₹400 package','Priority Seating', 'Exclusive TEDx T-shirt', 'Interactive Panel with the speakers'],
+      price: '₹599*',
+      features: ['Everything in the ₹400 package','Priority Seating', 'Exclusive TEDx T-shirt', 'Interactive Panel with the speakers',],
       color: 'from-red-600/30 to-red-900/30'
     },
     {
@@ -175,6 +175,7 @@ const WaitlistForm = () => {
             <h2 className="text-3xl font-bold text-red-500">TedX IIIT Sri City Waitlist</h2>
             
             <p className="mt-2 text-gray-300">*seats will be given out on first come first serve basis</p>
+            <p className="mt-2 text-gray-300">*only for students</p>
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-6">
