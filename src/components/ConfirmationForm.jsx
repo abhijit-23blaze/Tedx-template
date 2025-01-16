@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { doc, getDoc } from 'firebase/firestore';
 import { db } from '../firebase/config';
 
@@ -21,6 +22,16 @@ function ConfirmationForm() {
 
     fetchUserData();
   }, [userId]);
+
+  const navigate = useNavigate();
+
+  const handlePayment = () => {
+    window.open(userData.paylink, '_blank');
+    setTimeout(() => {
+      navigate('/thank-you');
+    }, 5000);
+  };
+
 
   if (!userData) {
     return (
@@ -85,12 +96,18 @@ function ConfirmationForm() {
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-sm text-gray-400">Registration ID</p>
-                <p className="text-lg font-mono text-white">{userId}</p>
+                <p className="text-lg font-mono text-white">{userData.uid}</p>
               </div>
-              {/* Fake QR Code */}
-              <div className="w-16 h-16 bg-white p-2 rounded-lg">
-                <div className="w-full h-full bg-[repeating-linear-gradient(45deg,#000000_0px,#000000_2px,transparent_2px,transparent_6px)]"></div>
-              </div>
+              
+              <button
+                onClick={handlePayment}
+                className="px-6 py-3 bg-red-600 hover:bg-red-700 text-white font-medium rounded-lg transition-colors duration-200 flex items-center space-x-2"
+              >
+                <span>Pay Now</span>
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M3 5a2 2 0 012-2h10a2 2 0 012 2v8a2 2 0 01-2 2h-2.22l.123.489.804.804A1 1 0 0113 18H7a1 1 0 01-.707-1.707l.804-.804L7.22 15H5a2 2 0 01-2-2V5zm5.771 7H5V5h10v7H8.771z" clipRule="evenodd" />
+                </svg>
+              </button>
             </div>
           </div>
         </div>
