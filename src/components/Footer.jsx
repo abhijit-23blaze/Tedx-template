@@ -31,13 +31,13 @@ const Footer = () => {
           >
             <img src={linkedinIcon} alt="LinkedIn" className="w-8 h-8" />
           </a>
-          <a
+          {/* <a
             href="https://www.twitter.com"
             className="hover:opacity-80"
             aria-label="Twitter"
           >
             <img src={twitterIcon} alt="Twitter" className="w-9 h-9" />
-          </a>
+          </a> */}
           <a href="mailto:tedx@iiits.in">
             <img src={gmailIcon} alt="Gmail" className="w-8 h-8" />
           </a>

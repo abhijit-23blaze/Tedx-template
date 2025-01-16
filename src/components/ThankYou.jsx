@@ -44,7 +44,7 @@ const ThankYou = () => {
           Payment Initiated!
         </h2>
         <p className="text-xl text-gray-300 mb-8">
-          Thank you for registering for TEDx IIITS. We will send you a confirmation email shortly with all the event details.
+          Thank you for registering for TEDxIIIT Sri City. We will send you a confirmation email shortly with all the event details.
         </p>
         
         {/* Social Links */}

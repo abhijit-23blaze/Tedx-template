@@ -17,7 +17,40 @@ function Team() {
         photo: "/teams/photo_2023-10-02_22-00-10 - Yojith Kaustabh.jpeg", // Replace with actual photo URL
       },
     ],
-    "Design Department": [
+    
+    "Sponsorships & Finanace": [
+      {
+        name: "Saurav Singh",
+
+        photo: "/teams/IMG_20240929_151013 - SAURAV SINGH.jpg", // Replace with actual photo URL
+      },
+      {
+        name: "Abhijit Patil",
+
+        photo: "/teams/IMG_20240527_232540767 - ABHIJIT CHANDRAKANT PATIL.jpg", // Replace with actual photo URL
+      },
+      {
+        name: "Anmol Kumar Pandey",
+
+        photo: "/teams/WhatsApp Image 2025-01-16 at 9.21.31 PM.jpeg", // Replace with actual photo URL
+      },
+      {
+        name: "Velicharla Madhu Sravani",
+
+        photo: "/teams/20240328_082657 - Madhu Sravani Velicharla.jpg", // Replace with actual photo URL
+      },
+      {
+        name: "Sripathy Siddartha",
+
+        photo: "/teams/DSC_2526 - Sripathy Siddartha.JPG", // Replace with actual photo URL
+      },
+    ],
+    "Design": [
+      {
+        name: "Akansh Vaibhav",
+
+        photo: "/teams/DP 7.png", // Replace with actual photo URL
+      },
       {
         name: "Vijay Krishna",
 
@@ -34,16 +67,18 @@ function Team() {
 
         photo: "/teams/Gagan Siddharth Sham.jpeg", // Replace with actual photo URL
       },
-      {
-        name: "Akansh Vaibhav",
-
-        photo: "/teams/DP 7.png", // Replace with actual photo URL
-      },
+      
       {
         name: "Sahal Ansar",
 
         photo: "/teams/WhatsApp Image 2025-01-16 at 11.27.33 PM.jpeg", // Replace with actual photo URL
       },
+      {
+        name: "Shriansh Jain",
+
+        photo: "/teams/WhatsApp Image 2025-01-16 at 8.28.10 PM.jpeg", // Replace with actual photo URL
+      },
+      
     ],
     "Website & Tech": [
       {
@@ -123,25 +158,14 @@ function Team() {
 
         photo: "/teams/pic_mine - SAKSHI AGRAWAL.jpg", // Replace with actual photo URL
       },
+      
+      
+    ],
+    "Video & Production": [
       {
-        name: "Shriansh Jain",
+        name: "Piyush Singh",
 
-        photo: "/teams/WhatsApp Image 2025-01-16 at 8.28.10 PM.jpeg", // Replace with actual photo URL
-      },
-      {
-        name: "Saurav Singh",
-
-        photo: "/teams/IMG_20240929_151013 - SAURAV SINGH.jpg", // Replace with actual photo URL
-      },
-      {
-        name: "Abhijit Patel",
-
-        photo: "/teams/IMG_20240527_232540767 - ABHIJIT CHANDRAKANT PATIL.jpg", // Replace with actual photo URL
-      },
-      {
-        name: "Anmol Kumar Pandey",
-
-        photo: "/teams/WhatsApp Image 2025-01-16 at 9.21.31 PM.jpeg", // Replace with actual photo URL
+        photo: "/teams/Piyush_Profile.png", // Replace with actual photo URL
       },
       {
         name: "Jaiveer Naik",
@@ -152,13 +176,6 @@ function Team() {
         name: "Vedant Kesarwani",
 
         photo: "/teams/IMG_20240529_072459 - Vedant Kesarwani.jpg", // Replace with actual photo URL
-      },
-    ],
-    "Video & Production": [
-      {
-        name: "Piyush Singh",
-
-        photo: "/teams/Piyush_Profile.png", // Replace with actual photo URL
       },
     ],
   };

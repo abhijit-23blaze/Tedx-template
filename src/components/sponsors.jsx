@@ -7,7 +7,7 @@ function Sponsors() {
   ];
   const partners = [
     {
-      name: "Bigstay",
+      name: "Big Stay",
       logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLuksl1mMFOSTPdrZPzutR7mdOutY0vJC_5A&s",
     },
     {
@@ -34,7 +34,7 @@ function Sponsors() {
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold text-red-600 mb-4">
-            Sponsors
+            Title Sponsors
           </h1>
           <div className="w-24 h-1 bg-red-600 mx-auto"></div>
         </div>
