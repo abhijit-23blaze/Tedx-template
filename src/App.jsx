@@ -12,7 +12,8 @@ import ConfirmationPage from "./pages/WaitlistPage/ConfirmationPage";
 import Speaker from "./components/Speaker";
 import SuccessPage from "./components/success";
 import Policies from "./components/policies";
-
+import Sponsors from "./components/sponsors";
+import Team from "./components/teams";
 function App() {
   const router = createBrowserRouter(
     [
@@ -27,6 +28,8 @@ function App() {
           { path: "/speakers", element: <Speaker /> },
           { path: "/success", element: <SuccessPage /> },
           { path: "/policies", element: <Policies /> },
+          { path: "/Sponsors", element: <Sponsors /> },
+          { path: "/Team", element: <Team /> },
 
           // Add catch-all route
           { path: "*", element: <Navigate to="/" replace /> },
