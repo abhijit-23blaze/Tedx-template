@@ -26,7 +26,7 @@ function ConfirmationForm() {
   const navigate = useNavigate();
 
   const handlePayment = () => {
-    window.open(userData.paylink, '_blank');
+    window.open(userData.pl, '_blank');
     setTimeout(() => {
       navigate('/thank-you');
     }, 5000);
