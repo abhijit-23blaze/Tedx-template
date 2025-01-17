@@ -45,6 +45,11 @@ const ThankYou = () => {
         </h2>
         <p className="text-xl text-gray-300 mb-8">
           Thank you for registering for TEDxIIIT Sri City. We will send you a confirmation email shortly with all the event details.
+
+        </p>
+        <p className="text-xl text-gray-300 mb-8">
+          If you faced any problems during the registeration / payment or have any feedback that you would  like to share please contact 8087864385.
+          
         </p>
         
         {/* Social Links */}
