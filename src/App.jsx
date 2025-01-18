@@ -15,6 +15,7 @@ import Policies from "./components/policies";
 import Sponsors from "./components/sponsors";
 import Team from "./components/teams";
 import ThankYou from './components/ThankYou';
+import AttendeeTracker from './components/AttendeeTracker';
 
 function App() {
   const router = createBrowserRouter(
@@ -33,6 +34,7 @@ function App() {
           { path: "/Sponsors", element: <Sponsors /> },
           { path: "/Team", element: <Team /> },
           { path: "/thank-you", element: <ThankYou /> },
+          { path: "/track-attendees", element: <AttendeeTracker /> },
 
           // Add catch-all route
           { path: "*", element: <Navigate to="/" replace /> },
