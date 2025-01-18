@@ -93,14 +93,14 @@ const AttendeeTracker = () => {
   );
 
   return (
-    <div className="min-h-screen w-screen pt-32 bg-gray-900 p-8">
+    <div className="min-h-screen w-screen pt-32 bg-900 p-8">
       {/* Stats Section */}
         <div className="grid grid-cols-4 gap-4 mb-8">
-          <div className="bg-gray-800 p-4 rounded-lg text-center">
+          <div className="bg-gray-900 p-4 rounded-lg text-center">
             <p className="text-gray-400">Total Registrations</p>
             <p className="text-2xl font-bold text-white">{stats.total}</p>
           </div>
-          <div className="bg-gray-800 p-4 rounded-lg text-center">
+          <div className="bg-gray-900 p-4 rounded-lg text-center">
             <p className="text-gray-400">Payment Completed</p>
             <p className="text-2xl font-bold text-green-500">{stats.paid.total}</p>
             <div className="text-sm mt-1">
@@ -108,7 +108,7 @@ const AttendeeTracker = () => {
               <p className="text-gray-400">Tier 2: {stats.paid.tier2}</p>
             </div>
           </div>
-          <div className="bg-gray-800 p-4 rounded-lg text-center">
+          <div className="bg-gray-900 p-4 rounded-lg text-center">
             <p className="text-gray-400">Present Today</p>
             <p className="text-2xl font-bold text-blue-500">{stats.present.total}</p>
             <div className="text-sm mt-1">
@@ -116,7 +116,7 @@ const AttendeeTracker = () => {
               <p className="text-gray-400">Tier 2: {stats.present.tier2}</p>
             </div>
           </div>
-          <div className="bg-gray-800 p-4 rounded-lg text-center">
+          <div className="bg-gray-900 p-4 rounded-lg text-center">
             <p className="text-gray-400">Special Guests</p>
             <p className="text-2xl font-bold text-purple-500">{stats.special}</p>
           </div>
@@ -127,7 +127,7 @@ const AttendeeTracker = () => {
         <input
           type="text"
           placeholder="Search by Registration ID or Name..."
-          className="w-2/3 p-4 bg-gray-800 rounded-lg text-white"
+          className="w-2/3 p-4 bg-gray-900 rounded-lg text-white"
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
         />
@@ -141,7 +141,7 @@ const AttendeeTracker = () => {
 
       {/* Add Attendee Form */}
       {showAddForm && (
-        <div className="bg-gray-800 p-6 rounded-lg mb-6">
+        <div className="bg-gray-900 p-6 rounded-lg mb-6">
           <form onSubmit={handleAddAttendee} className="grid grid-cols-2 gap-4">
             <input
               type="text"
@@ -194,7 +194,7 @@ const AttendeeTracker = () => {
       {/* Attendees List */}
       <div className="space-y-4">
         {filteredAttendees.map(attendee => (
-          <div key={attendee.id} className="bg-gray-800 p-4 rounded-lg flex items-center justify-between">
+          <div key={attendee.id} className="bg-gray-900 p-4 rounded-lg flex items-center justify-between">
             <div>
               <p className="text-white font-bold">
                 {attendee.name}
