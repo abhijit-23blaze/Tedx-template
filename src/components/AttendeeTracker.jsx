@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { db } from '../firebase/config.js';
-import { collection, getDocs, updateDoc, doc, addDoc } from 'firebase/firestore';
+import { collection, getDocs, updateDoc, doc, addDoc, deleteDoc } from 'firebase/firestore';
 
 const AttendeeTracker = () => {
   const [attendees, setAttendees] = useState([]);
@@ -15,7 +15,6 @@ const AttendeeTracker = () => {
   const [newAttendee, setNewAttendee] = useState({
     name: '',
     uid: '',
-    email: '',
     phone: '',
     tier: 'Tier 2',
     isSpecialGuest: false
@@ -24,6 +23,17 @@ const AttendeeTracker = () => {
   useEffect(() => {
     fetchAttendees();
   }, []);
+
+  const deleteAttendee = async (attendeeId) => {
+    if (window.confirm('Are you sure you want to delete this attendee?')) {
+      try {
+        await deleteDoc(doc(db, 'waitlist', attendeeId));
+        fetchAttendees();
+      } catch (error) {
+        console.error('Error deleting attendee:', error);
+      }
+    }
+  };
 
   const fetchAttendees = async () => {
     const querySnapshot = await getDocs(collection(db, 'waitlist'));
@@ -151,14 +161,7 @@ const AttendeeTracker = () => {
               onChange={(e) => setNewAttendee({...newAttendee, name: e.target.value})}
               required
             />
-            <input
-              type="email"
-              placeholder="Email"
-              className="p-2 bg-gray-700 rounded text-white"
-              value={newAttendee.email}
-              onChange={(e) => setNewAttendee({...newAttendee, email: e.target.value})}
-              required
-            />
+            
             <input
               type="tel"
               placeholder="Phone"
@@ -230,10 +233,21 @@ const AttendeeTracker = () => {
               >
                 {attendee.isSpecialGuest ? 'Special Guest' : 'Mark Special'}
               </button>
+              <button
+                onClick={() => deleteAttendee(attendee.id)}
+                className="px-4 py-2 rounded bg-red-600 hover:bg-red-700"
+              >
+                Delete
+              </button>
             </div>
+            
           </div>
+          
         ))}
       </div>
+      <div className="mt-8 text-center pb-4">
+      <p className="text-gray-500 text-sm italic">Abhijit Patil the Sigma Productions</p>
+    </div>
     </div>
   );
 };
