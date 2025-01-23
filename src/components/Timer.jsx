@@ -53,12 +53,16 @@ function CountdownTimer({ targetDate }) {
         </div>
       ))}
     </div>
+
+
+
   );
 }
 
 function Timer() {
   // change the date
   const targetDate = new Date("2025-01-19T23:59:59"); // Set your target date here
+
 
   return (
     <div className="h-[80%]">
@@ -70,6 +74,7 @@ function Timer() {
         }}
       >
         <h3 className="text-3xl font-semibold  text-white mb-20">
+          
           Countdown to our special event.
         </h3>
 
