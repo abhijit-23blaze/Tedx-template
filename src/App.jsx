@@ -42,8 +42,7 @@ function App() {
       },
     ],
     {
-      // Add basename if deploying to GitHub Pages
-      //basename: process.env.PUBLIC_URL
+      
     }
   );
 
