@@ -24,7 +24,7 @@ function Header() {
                 to="/"
                 className="text-2xl font-bold text-red-600 hover:text-red-600"
               >
-                TEDx<span className="text-white">IIIT Sri City</span>
+                TEDx<span className="text-white">IIIT Sri City</span><span className="hover:animate-none animate-pulse-red"> Live</span>
               </Link>
             </div>
 
@@ -57,9 +57,9 @@ function Header() {
             {/* Desktop Navigation */}
             <div className="hidden md:flex md:items-center md:space-x-8">
               {[
-                "HOME",
+                // "HOME",
                 "SPEAKERS",
-                "SPONSORS",
+                // "SPONSORS",
                 "TEAM",
                 "ABOUT",
                 "POLICIES",
@@ -75,12 +75,12 @@ function Header() {
                   </span>
                 </Link>
               ))}
-              <Link
+              {/* <Link
                 to="/form"
                 className="px-6 py-2 bg-gradient-to-r from-red-600 to-red-800 text-white rounded-full hover:from-red-700 hover:to-red-900 transition-all duration-300 transform hover:scale-105 animate-pulse hover:animate-none text-sm tracking-widest shadow-lg hover:shadow-red-600/50"
               >
                 JOIN WAITLIST
-              </Link>
+              </Link> */}
             </div>
           </div>
 
@@ -88,9 +88,9 @@ function Header() {
           <div className={`${isMenuOpen ? "block" : "hidden"} md:hidden mt-4`}>
             <div className="flex flex-col space-y-4 py-4">
               {[
-                "HOME",
+                // "HOME",
                 "SPEAKERS",
-                "SPONSORS",
+                // "SPONSORS",
                 "TEAM",
                 "ABOUT",
                 "POLICIES",
@@ -104,13 +104,13 @@ function Header() {
                   {item}
                 </Link>
               ))}
-              <Link
+              {/* <Link
                 to="/form"
                 className="px-6 py-2 bg-gradient-to-r from-red-600 to-red-800 text-white rounded-full hover:from-red-700 hover:to-red-900 transition-all duration-300 text-center text-sm tracking-widest shadow-lg hover:shadow-red-600/50"
                 onClick={toggleMenu}
               >
                 JOIN WAITLIST
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>

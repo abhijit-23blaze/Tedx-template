@@ -12,12 +12,17 @@ export default {
         'fade-in-delay': 'fadeIn 1s ease-out 0.5s forwards',
         'blob': "blob 7s infinite",
         'gradient-xy': 'gradient-xy 15s ease infinite',
+        'pulse-red': 'pulse-red 3s ease-in-out infinite',
       },
       keyframes: {
         wide: {
           '0%, 100%': { width: '5rem' },
           '50%': { width: '7rem' },
         },
+        'pulse-red': {
+        '0%, 100%': { color: 'rgb(153, 27, 27)' }, // red-800
+        '50%': { color: 'rgb(231, 0, 11)' }     // red-600
+      },
         fadeIn: {
           '0%': { opacity: '0', transform: 'translateY(10px)' },
           '100%': { opacity: '1', transform: 'translateY(0)' },

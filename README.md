@@ -9,11 +9,11 @@ Currently, two official plugins are available:
 
 ## Tasks to be done
 
-- [ ] Countdown Fix karna hai (13/04/2025 12:00 noon)
+- [x] Countdown Fix karna hai (13/04/2025 12:00 noon)
 - [ ] Team Section Change karna hai
 - [ ] Speaker update
-- [ ] Join Waitlist ko remove
-- [ ] Hero Pe date change karni hai. Kaledioscope ki jagah "Humanity Reimagined", TEDx hero me live aur add karna hai
-- [ ] Sponsors ko comment karna hai
+- [x] Join Waitlist ko remove
+- [x] Hero Pe date change karni hai. Kaledioscope ki jagah "Humanity Reimagined", TEDx hero me live aur add karna hai
+- [x] Sponsors ko comment karna hai
 - [ ] About page me TEDx -> TEDx Live + Content Change
 - [ ] Remove Number from Why Part matters card
