@@ -18,12 +18,10 @@ function CountdownTimer({ targetDate }) {
       }
 
       setTimeLeft({
-        days: Math.floor(distance / (1000 * 60 * 60 * 24)),
-        hours: Math.floor(
-          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-        ),
-        minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
-        seconds: Math.floor((distance % (1000 * 60)) / 1000),
+        days: Math.floor(distance / (1000 * 60 * 60 * 24)) | 0,
+        hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)) | 0,
+        minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)) | 0,
+        seconds: Math.floor((distance % (1000 * 60)) / 1000) | 0,
       });
     }, 1000);
 
@@ -31,14 +29,11 @@ function CountdownTimer({ targetDate }) {
   }, [targetDate]);
 
   return (
-    <div
-      className="flex justify-center items-center bg-black rounded-full py-4 px-4"
-      trans
-    >
-      {["Days", "Hours", "Minutes", "Seconds"].map((label, index) => (
-        <div key={label} className="text-center mx-2">
+    <div className="flex justify-center items-center bg-black rounded-full py-2 px-3 md:py-4 md:px-6">
+      {["Days", "Hours", "Minutes", "Seconds"].map((label) => (
+        <div key={label} className="text-center px-1 mx-1 md:px-3 md:mx-2">
           <p
-            className="text-5xl font-bold"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold"
             style={{ color: "rgba(144, 14, 16, 255)" }}
           >
             {label === "Days"
@@ -49,7 +44,7 @@ function CountdownTimer({ targetDate }) {
               ? timeLeft.minutes
               : timeLeft.seconds}
           </p>
-          <p className="text-lg text-white">{label}</p>
+          <p className="text-xs sm:text-sm md:text-base lg:text-lg text-white">{label}</p>
         </div>
       ))}
     </div>
@@ -61,7 +56,7 @@ function CountdownTimer({ targetDate }) {
 
 function Timer() {
   // change the date
-  const targetDate = new Date("2025-01-19T23:59:59"); // Set your target date here
+  const targetDate = new Date("2025-04-13T11:59:59"); // Set your target date here
 
 
   return (
