@@ -25,7 +25,7 @@ function Booking() {
               Humanity Reimagined
             </h2>
             <p className="text-lg text-gray-300 leading-relaxed italic">
-              Envisions a world where the beauty of human diversity comes together to create something extraordinary. Just like a kaleidoscope, where every shift reveals new patterns and colors, humanity is a vibrant mosaic of cultures, perspectives, and experiences.
+AI is accelerating. Boundaries are shifting. What it means to be human is being redefined. The answer isn’t to resist but to reimagine—embracing curiosity, imagination, and connection in ways no machine can. The future is uncertain, but one truth remains: <span className="text-red-600 tracking-tight font-bold ">it will be what we dare to create.</span>
             </p>
           </div>
         </div>

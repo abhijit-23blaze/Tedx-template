@@ -1,10 +1,63 @@
 function ReasonsToAttend() {
+  // const reasons = [
+  //   {
+  //     id: 1,
+  //     title: "Diverse Ideas",
+  //     description:
+  //       "A day where remarkable individuals from all walks of life share the stories that shaped their legacy",
+  //     image: "/diverse.png",
+  //     alt: "Diverse Ideas",
+  //   },
+  //   {
+  //     id: 2,
+  //     title: "Networking",
+  //     description:
+  //       "Opportunity to engage in dialogue and connect with diverse individuals,a collaborative exchange of ideas.",
+  //     image: "/network.jpg",
+  //     alt: "Networking",
+  //   },
+  //   {
+  //     id: 3,
+  //     title: "Inspiration",
+  //     description:
+  //       "Hear stories that inspire and challenge the way you think about the world.",
+  //     image: "/inspiration.jpg",
+  //     alt: "Inspiration",
+  //   },
+  //   {
+  //     id: 4,
+  //     title: "Performances",
+  //     description:
+  //       "Entertainment is never overlooked! Find yourself immersed in a day of brilliant performances, ranging from art to music to stand-up comedy.",
+  //     image: "/performance.jpeg",
+  //     alt: "Performances",
+  //   },
+  //   {
+  //     id: 5,
+  //     title: "Expeience to cherish",
+  //     description:
+  //       "Hear stories that inspire and challenge the way you think about the world.",
+  //     image: "/experience.jpg",
+  //     alt: "Experience to cherish",
+  //   },
+  //   {
+  //     id: 6,
+  //     title: "Meet and Greet",
+  //     description:
+  //       "Connect with fellow attendees & special guests in an engaging meet and greet session, where meaningful conversations and new friendships begin.",
+  //     image: "/meetngreet.png",
+  //     alt: "Meet and Greet",
+  //   },
+
+  //   // Add more items as needed
+  // ];
+
   const reasons = [
     {
       id: 1,
       title: "Diverse Ideas",
       description:
-        "A day where remarkable individuals from all walks of life share the stories that shaped their legacy",
+        "A stage where extraordinary minds from different backgrounds share stories that define their journey and legacy.",
       image: "/diverse.png",
       alt: "Diverse Ideas",
     },
@@ -12,7 +65,7 @@ function ReasonsToAttend() {
       id: 2,
       title: "Networking",
       description:
-        "Opportunity to engage in dialogue and connect with diverse individuals,a collaborative exchange of ideas.",
+        "An incredible chance to engage in conversations, exchange ideas, and build meaningful connections with like-minded individuals.",
       image: "/network.jpg",
       alt: "Networking",
     },
@@ -20,7 +73,7 @@ function ReasonsToAttend() {
       id: 3,
       title: "Inspiration",
       description:
-        "Hear stories that inspire and challenge the way you think about the world.",
+        "Experience powerful stories that ignite new perspectives and challenge the way you see the world, empowering you to make a positive impact.",
       image: "/inspiration.jpg",
       alt: "Inspiration",
     },
@@ -28,30 +81,28 @@ function ReasonsToAttend() {
       id: 4,
       title: "Performances",
       description:
-        "Entertainment is never overlooked! Find yourself immersed in a day of brilliant performances, ranging from art to music to stand-up comedy.",
+        "Prepare to be captivated by an electrifying lineup of performances, from soulful music to stand-up comedy and artistic showcases.",
       image: "/performance.jpeg",
       alt: "Performances",
     },
     {
       id: 5,
-      title: "Expeience to cherish",
+      title: "Experience to Cherish",
       description:
-        "Hear stories that inspire and challenge the way you think about the world.",
+        "A day filled with unforgettable moments, where inspiring stories and shared experiences leave a lasting impact.",
       image: "/experience.jpg",
-      alt: "Experience to cherish",
+      alt: "Experience to Cherish",
     },
     {
       id: 6,
       title: "Meet and Greet",
       description:
-        "Connect with fellow attendees & special guests in an engaging meet and greet session, where meaningful conversations and new friendships begin.",
+        "Engage in meaningful conversations, connect with fellow attendees, and meet special guests in an exclusive networking session.",
       image: "/meetngreet.png",
       alt: "Meet and Greet",
     },
-
-    // Add more items as needed
   ];
-
+  
   return (
     <section className="py-24 relative overflow-hidden">
       {/* Background Effects */}
@@ -93,9 +144,9 @@ function ReasonsToAttend() {
                 </div>
                 
                 <div className="relative">
-                  <span className="absolute -top-12 right-0 text-6xl font-bold text-red-600/10">
+                  {/* <span className="absolute -top-12 right-0 text-6xl font-bold text-red-600/10">
                     {`0${reason.id}`}
-                  </span>
+                  </span> */}
                   <h3 className="text-2xl font-bold text-white mb-4">{reason.title}</h3>
                   <p className="text-gray-300 leading-relaxed">
                     {reason.description}
