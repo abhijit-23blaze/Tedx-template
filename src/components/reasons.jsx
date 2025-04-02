@@ -89,7 +89,7 @@ function ReasonsToAttend() {
       id: 5,
       title: "Experience to Cherish",
       description:
-        "A day filled with unforgettable moments, where inspiring stories and shared experiences leave a lasting impact.",
+        "A day filled with unforgettable moments, where inspiring stories and shared experiences leave a lasting impact on your life.",
       image: "/experience.jpg",
       alt: "Experience to Cherish",
     },
