@@ -22,7 +22,7 @@ function Booking() {
         <div className="w-full md:w-1/2 space-y-8">
           <div className="backdrop-blur-lg bg-black/30 rounded-xl p-8 border border-gray-700 shadow-2xl">
             <h2 className="text-3xl md:text-4xl font-bold text-red-600 mb-6">
-              Kaleidoscope of Humanity
+              Humanity Reimagined
             </h2>
             <p className="text-lg text-gray-300 leading-relaxed italic">
               Envisions a world where the beauty of human diversity comes together to create something extraordinary. Just like a kaleidoscope, where every shift reveals new patterns and colors, humanity is a vibrant mosaic of cultures, perspectives, and experiences.
@@ -42,12 +42,12 @@ function Booking() {
           >
             <div className="absolute inset-0 bg-gradient-to-br from-black/80 to-transparent"></div>
             <div className="absolute inset-0 flex items-center justify-center">
-              <button 
+              {/* <button 
                 onClick={handleClick}
                 className="px-8 py-4 bg-transparent text-red-500 text-xl font-bold border-2 border-red-500 rounded-full hover:bg-red-500 hover:text-white transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-red-500/50"
               >
                 JOIN WAITLIST
-              </button>
+              </button> */}
             </div>
           </div>
         </div>
