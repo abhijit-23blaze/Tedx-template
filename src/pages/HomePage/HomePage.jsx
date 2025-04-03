@@ -9,7 +9,6 @@ function HomePage() {
   return (
     <div>
       <StartingBanner />
-
       <Booking />
       <Timer />
       <ReasonsToAttend />
